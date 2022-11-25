@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(90deg,
+      rgba(48, 16, 255, 1) 0%,
+      rgba(100, 115, 255, 1) 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+
+}
+
+.taskContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #161a2b;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  margin: 20px;
+  color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  margin-bottom: 32px;
+  padding: 10px 20px;
+}
+
+.form input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.form input::placeholder {
+  color: #e2e2e2;
+
+}
+
+.form button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%);
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.task-row-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background: linear-gradient(90deg,
+      rgba(255, 118, 20, 1) 0%,
+      rgba(255, 84, 17, 1) 100%);
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+  margin-bottom: 10px;
+
+
+
+}
+
+.task-row:nth-child(4n + 1) {
+  background: linear-gradient(90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%);
+}
+
+.task-row:nth-child(4n + 2) {
+  background: linear-gradient(90deg,
+      rgba(255, 12, 241, 1) 0%,
+      rgba(250, 0, 135, 1) 100%);
+}
+
+.task-row:nth-child(4n + 3) {
+  background: linear-gradient(90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%);
+}
+
+.delBtn {
+  background-color: red;
+  color: wheat;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.editBtn {
+  background-color: green;
+  color: wheat;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+li {
+  list-style: none;
 }
