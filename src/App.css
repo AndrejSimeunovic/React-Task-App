@@ -69,7 +69,7 @@ body {
 
 .task-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   color: #fff;
   background: linear-gradient(90deg,
       rgba(255, 118, 20, 1) 0%,
@@ -78,9 +78,6 @@ body {
   border-radius: 5px;
   width: 90%;
   margin-bottom: 10px;
-
-
-
 }
 
 .task-row:nth-child(4n + 1) {
@@ -103,11 +100,13 @@ body {
 
 .delBtn {
   background-color: red;
+  margin-left: auto;
   color: wheat;
   cursor: pointer;
   padding: 5px;
   border-radius: 5px;
   border: none;
+  margin-right: 5px;
 }
 
 .editBtn {
@@ -122,3 +121,29 @@ body {
 li {
   list-style: none;
 }
+
+.formEdit {
+  margin-bottom: 10px;
+  padding-left: 0px;
+}
+
+
+.formEdit input {
+   width: 279px;
+}
+
+.iconDel {
+  margin-left: auto;
+  color: wheat;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size:x-large;
+}
+
+.iconEdit {
+  color: wheat;
+  cursor: pointer;
+  font-size:x-large;
+}
+
+
