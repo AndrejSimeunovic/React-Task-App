@@ -40,17 +40,16 @@ class App extends Component {
     document.getElementById("task").value = "";
   }
 
-  handleDelete(e) {
-    let objId = e.target.parentElement.id;
+  handleDelete(id) {
+    let objId = id;
     let filter = this.state.tasks.filter((obj) => obj.id !== objId);
     this.setState({
       tasks: filter,
     });
   }
 
-  handleResubmit(e) {
-    e.preventDefault();
-    let objId = e.target.parentElement.id;
+  handleResubmit(id) {
+    let objId = id;
     this.setState({
       tasks: this.state.tasks.map((task) => {
         if (objId === task.id) {
@@ -62,11 +61,11 @@ class App extends Component {
     });
   }
 
-  changeEditState(e) {
-    let id = e.target.parentElement.id;
+  changeEditState(id) {
+    let objId = id;
     this.setState({
       tasks: this.state.tasks.map((task) => {
-        if (id === task.id) {
+        if (objId === task.id) {
           return { ...task, editing: true };
         }
         return task;
@@ -78,9 +77,14 @@ class App extends Component {
     return (
       <div className="container">
         <div className="taskContainer">
-        <span className="title">What's the plan for today?</span>
+          <span className="title">What's the plan for today?</span>
           <form className="form" onSubmit={this.handleSubmit}>
-            <input id="task" type="text" onChange={this.handleChange} placeholder="Task.."></input>
+            <input
+              id="task"
+              type="text"
+              onChange={this.handleChange}
+              placeholder="Task..."
+            />
             <button type="submit">Add task</button>
           </form>
           <Overview
